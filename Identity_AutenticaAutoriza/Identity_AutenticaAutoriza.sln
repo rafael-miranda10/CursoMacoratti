@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity_AutenticaAutoriza", "Identity_AutenticaAutoriza\Identity_AutenticaAutoriza.csproj", "{AB2E8A25-7BE1-4887-9FDA-EF600B43C98A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB2E8A25-7BE1-4887-9FDA-EF600B43C98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2E8A25-7BE1-4887-9FDA-EF600B43C98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2E8A25-7BE1-4887-9FDA-EF600B43C98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2E8A25-7BE1-4887-9FDA-EF600B43C98A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F42E7942-974F-4C52-80B7-6E3DF5ED0C0A}
+	EndGlobalSection
+EndGlobal
