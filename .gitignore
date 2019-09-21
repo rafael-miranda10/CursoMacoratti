@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MVC_Identity/.vs/MVC_Identity/v16/Server/sqlite3
