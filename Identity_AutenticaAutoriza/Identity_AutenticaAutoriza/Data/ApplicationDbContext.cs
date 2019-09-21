@@ -15,6 +15,8 @@ namespace Identity_AutenticaAutoriza.Data
         {
         }
 
+        public DbSet<Contato> Contatos { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
