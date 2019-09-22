@@ -29,9 +29,46 @@ namespace Identity_AutenticaAutoriza
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                // o codigo abaixo exemplifica como customizar o padrão de senha 
+                //solicitado pelo identity. Atenção, isso pode deixar os critérios
+                //farcos e fragilizando a aplicação - isso acontece abaixo
+
+                //politica de senha
+
+                //options.Password.RequiredLength = 10;
+                //options.Password.RequireLowercase = false;
+                //options.Password.RequireUppercase = false;
+                //options.Password.RequireNonAlphanumeric = false;
+
+                //bloqueio de usuário
+
+                //options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+                //options.Lockout.MaxFailedAccessAttempts = 3;
+                //options.Lockout.AllowedForNewUsers = true;
+
+                //configurações de login
+
+                //options.SignIn.RequireConfirmedEmail = true;
+                //options.SignIn.RequireConfirmedPhoneNumber = true;
+
+                //configurações de validação do usuário
+                //options.User.RequireUniqueEmail = true;
+                //options.User.AllowedUserNameCharacters = "abacdef"; //<- aqui deve-se informar todos os caracteres permitos para a senha
+
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            //definições de cookie
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    options.Cookie.Name = "Nome desejado";
+            //    options.Cookie.HttpOnly = true;
+            //    options.Cookie.Expiration = TimeSpan.FromMinutes(30);
+            //});
+
 
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
