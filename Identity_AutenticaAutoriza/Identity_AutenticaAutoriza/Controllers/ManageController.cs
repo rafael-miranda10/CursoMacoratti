@@ -16,7 +16,7 @@ using Identity_AutenticaAutoriza.Services;
 
 namespace Identity_AutenticaAutoriza.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     [Route("[controller]/[action]")]
     public class ManageController : Controller
     {
