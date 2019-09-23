@@ -10,3 +10,15 @@ E:\Portifolio\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutori
 E:\Portifolio\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.AssemblyInfo.cs
 E:\Portifolio\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.dll
 E:\Portifolio\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.pdb
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\bin\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.deps.json
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\bin\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.runtimeconfig.json
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\bin\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.runtimeconfig.dev.json
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\bin\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.dll
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\bin\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.pdb
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.csprojAssemblyReference.cache
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.csproj.CoreCompileInputs.cache
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.AssemblyInfoInputs.cache
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.AssemblyInfo.cs
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.dll
+C:\Estudo Curso Macoratti\CursoMacoratti\Identity_AutenticaAutoriza\Identity_AutenticaAutoriza\obj\Debug\netcoreapp2.0\Identity_AutenticaAutoriza.pdb

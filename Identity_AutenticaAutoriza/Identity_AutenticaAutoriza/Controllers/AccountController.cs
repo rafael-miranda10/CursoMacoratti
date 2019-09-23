@@ -21,13 +21,15 @@ namespace Identity_AutenticaAutoriza.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager,
+             RoleManager<IdentityRole> roleManager,
+        SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ILogger<AccountController> logger)
         {
@@ -35,6 +37,7 @@ namespace Identity_AutenticaAutoriza.Controllers
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
+            _roleManager = roleManager;
         }
 
         [TempData]
@@ -224,6 +227,16 @@ namespace Identity_AutenticaAutoriza.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+
+                    ////trecho de código meramente ilustrativo de como cadastrar uma role e atribui a uma usuário
+                    ////verificar se o perfil admin existe e incluir o usuário neste perfil
+                    //if (!await _roleManager.RoleExistsAsync("Admin"))
+                    //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
+
+                    ////atribuir o perfil ao usuário
+                    //await _userManager.AddToRoleAsync(user, "Admin");
+
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);

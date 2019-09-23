@@ -83,7 +83,7 @@ namespace Identity_AutenticaAutoriza
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -106,6 +106,50 @@ namespace Identity_AutenticaAutoriza
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            CreateRoles(serviceProvider);
+
+        }
+
+        private void CreateRoles(IServiceProvider serviceProvider)
+        {
+            var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+            Task<IdentityResult> roleResultado;
+            string email = "admin@admin.net";
+
+            //verifique se existe um perfil Administrator e o cria se não existir
+            Task<bool> hasAdminRole = roleManager.RoleExistsAsync("Administrador");
+            hasAdminRole.Wait();
+
+            if (!hasAdminRole.Result)
+            {
+                roleResultado = roleManager.CreateAsync(new IdentityRole("Administrator"));
+                roleResultado.Wait();
+            }
+
+            //verifica se o usuário admin existe e o cria se não existir
+            //e a seguir o incluir no perfil Admin
+            Task<ApplicationUser> testeUser = userManager.FindByEmailAsync(email);
+            testeUser.Wait();
+
+
+            if (testeUser.Result == null)
+            {
+                ApplicationUser administrator = new ApplicationUser();
+                administrator.Email = email;
+                administrator.UserName = email;
+
+                Task<IdentityResult> novoUsuario = userManager.CreateAsync(administrator, "Amdk@1990");
+                novoUsuario.Wait();
+
+                if (novoUsuario.Result.Succeeded)
+                {
+                    Task<IdentityResult> novoUsuarioRole = userManager.AddToRoleAsync(administrator, "Administrator");
+                    novoUsuarioRole.Wait();
+                }
+            }
         }
     }
 }

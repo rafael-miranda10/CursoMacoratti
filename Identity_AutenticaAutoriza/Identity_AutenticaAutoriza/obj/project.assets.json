@@ -7213,11 +7213,12 @@
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "RDy8+NTZ9Ul0J8NHM5sstu8rL1jm2UkuhCT6K6fNSjWWF5OXGoXVeJEJDAND+WoNVmwL92IpBDGbFzduWQIbTw==",
+      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
       "type": "package",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll",
         "lib/net451/Microsoft.Extensions.PlatformAbstractions.xml",
         "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll",
@@ -9760,7 +9761,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "Gs26e3DCB1uegkS0EvDXEbj/UbWci8jvoX3pStMI3/YmzspVymGB38j84B3cH0x1Ykqzg/+7pSJZsYbvvQaF7A==",
+      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -10572,7 +10573,7 @@
       ]
     },
     "System.Linq.Parallel/4.3.0": {
-      "sha512": "yvutAdIMbm0cPxsSIC4BXAr+hp0vfhnHqXE5qi8aTQnHks4QloQuvZnstD+ZF4HGCoKTjyKm6j+TMAlayTKnoQ==",
+      "sha512": "td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "type": "package",
       "path": "system.linq.parallel/4.3.0",
       "files": [
@@ -12037,11 +12038,12 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "d56NCfx9JH3knI6xFy6UM/7AeiLMa5Hi+KNEgVLkj3W2zST50rk4akm5B5GrK4UPjhq3cN4pP0xnUsAcT+mxeg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -13051,11 +13053,12 @@
       ]
     },
     "System.Threading.Tasks.Parallel/4.3.0": {
-      "sha512": "+XN46xYyZSQZWpzynWUTTAUGyDZySyEFXgx7+SnS5Q/GCtWtwmAfbPH8PVLSoE7wiaptrYcUTdII9akVXWVB8w==",
+      "sha512": "cbjBNZHf/vQCfcdhzx7knsiygoCKgxL8mZOeocXZn5gWhCdzHIq6bYNKWX0LAJCWYP7bds4yBK8p06YkP0oa0g==",
       "type": "package",
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -13641,23 +13644,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arthur_rafa\\.nuget\\packages\\": {},
+    "C:\\Users\\rafael.miranda\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Portifolio\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza.csproj",
+      "projectUniqueName": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza.csproj",
       "projectName": "Identity_AutenticaAutoriza",
-      "projectPath": "E:\\Portifolio\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza.csproj",
-      "packagesPath": "C:\\Users\\arthur_rafa\\.nuget\\packages\\",
-      "outputPath": "E:\\Portifolio\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\obj\\",
+      "projectPath": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza.csproj",
+      "packagesPath": "C:\\Users\\rafael.miranda\\.nuget\\packages\\",
+      "outputPath": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\Identity_AutenticaAutoriza\\Identity_AutenticaAutoriza\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\arthur_rafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafael.miranda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
