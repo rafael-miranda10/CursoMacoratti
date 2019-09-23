@@ -1,0 +1,23 @@
+﻿@using System.Security.Claims
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Home</h2>
+<br />
+<ul>
+    @if (ViewBag.Claims != null)
+    {
+        <h3>Claims do Usuário - Crie um usuário ou faça o login para começar...</h3>
+
+        @foreach (Claim item in ViewBag.Claims)
+        {
+            <li>@item.ToString()</li>
+        }
+    }
+    else
+    {
+        <h3>Nenhum Usuário logado</h3>
+    }
+</ul>
