@@ -26,7 +26,9 @@ namespace GalaxiaAPI
                       options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<MeuRoleIdentity, MeuRoleIdentity>()
-                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    // A linha a baixo teve que ser comentada e criado a classe MyDbContextFactory.cs no mesmo diretóio
+                    // onde esta a classe do context
+                    //.AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultTokenProviders();
 
         }
@@ -41,7 +43,12 @@ namespace GalaxiaAPI
 
             app.UseAuthentication();
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
