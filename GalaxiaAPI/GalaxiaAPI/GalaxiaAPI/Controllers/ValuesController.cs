@@ -1,26 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using GalaxiaAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace GalaxiaAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private readonly UserManager<MeuUserIdentity> _userManager;
+
+        public ValuesController(UserManager<MeuUserIdentity> userManager)
+        {
+            _userManager = userManager;
+        }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            MeuUserIdentity user = _userManager.GetUserAsync(HttpContext.User).Result;
+            return new string[] { "valor1", "valor1" , "valor3" };
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return $"valor {id}";
         }
 
         // POST api/values
