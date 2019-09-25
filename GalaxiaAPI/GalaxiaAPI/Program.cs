@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace GalaxiaAPI
@@ -18,6 +19,7 @@ namespace GalaxiaAPI
         }
 
         public static IWebHost BuildWebHost(string[] args) =>
+            
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
