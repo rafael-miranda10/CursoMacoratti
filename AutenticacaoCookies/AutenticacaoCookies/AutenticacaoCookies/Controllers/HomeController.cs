@@ -13,6 +13,7 @@ namespace AutenticacaoCookies.Controllers
         public IActionResult Entrada()
         {
             return View();
+
         }
 
         [AllowAnonymous]
