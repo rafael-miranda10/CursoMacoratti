@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -29,10 +29,14 @@
 
   <ItemGroup>
     <None Remove="ClientApp\app\components\Cliente\cliente.component.ts" />
+    <None Remove="ClientApp\app\Models\cliente.interface.ts" />
+    <None Remove="ClientApp\app\Services\cliente.service.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\Cliente\cliente.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Models\cliente.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Services\cliente.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
