@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+    <title>Contatos</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var options = {};
+            options.url = "/api/contatos";
+            options.type = "GET";
+            options.dataType = "json";
+            options.success = function (data) {
+                data.forEach(function (element) {
+                    $("#id").append("<option>"
+                        + element.id + "</option>");
+                });
+            };
+            options.error = function () {
+                $("#msg").html("Erro ao chamar a API!");
+            };
+            $.ajax(options);
+
+            $("#id").change(function () {
+                var options = {};
+                options.url = "/api/contatos/" +
+                    $("#id").val();
+                options.type = "GET";
+                options.dataType = "json";
+                options.success = function (data) {
+                    $("#nome").val(data.nome);
+                    $("#email").val(data.email);
+                    $("#telefone").val(data.telefone);
+                };
+                options.error = function () {
+                    $("#msg").html("Erro ao chamar a API!");
+                };
+                $.ajax(options);
+            });
+
+            $("#incluir").click(function () {
+                    var options = {};
+                    options.url = "/api/contatos";
+                    options.type = "POST";
+
+                    var obj = {};
+                    obj.nome = $("#nome").val();
+                    obj.email = $("#email").val();
+                    obj.telefone = $("#telefone").val();
+
+                    options.data = JSON.stringify(obj);
+                    options.contentType = "application/json";
+                    options.dataType = "html";
+
+                    options.success = function (msg) {
+                        $("#msg").html(msg);
+                    };
+                    options.error = function () {
+                        $("#msg").html("Erro ao chamar a API!");
+                    };
+                    $.ajax(options);
+                });
+
+            $("#atualizar").click(function () {
+                var options = {};
+                options.url = "/api/contatos/" + $("#id").val();
+                options.type = "PUT";
+
+                var obj = {};
+                obj.Id = $("#id").val();
+                obj.nome = $("#nome").val();
+                obj.email = $("#email").val();
+                obj.telefone = $("#telefone").val();
+
+                options.data = JSON.stringify(obj);
+                options.contentType = "application/json";
+                options.dataType = "html";
+                options.success = function (msg) {
+                    $("#msg").html(msg);
+                };
+                options.error = function () {
+                    $("#msg").html("Erro ao chamar a API!");
+                };
+                $.ajax(options);
+            });
+
+            $("#excluir").click(function () {
+                var options = {};
+                options.url = "/api/contatos/" + $("#id").val();
+                options.type = "DELETE";
+                options.dataType = "html";
+                options.success = function (msg) {
+                    $("#msg").html(msg);
+                };
+                options.error = function () {
+                    $("#msg").html("Erro ao chamar a API!");
+                };
+                $.ajax(options);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Meus Contatos</h1>
+    <form>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Contato ID :</td>
+                <td>
+                    <select id="id"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Nome :</td>
+                <td><input id="nome" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input id="email" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Telefone :</td>
+                <td><input id="telefone" type="text" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="incluir"
+                           value="Incluir" />
+                    <input type="button" id="atualizar"
+                           value="Atualizar" />
+                    <input type="button" id="excluir"
+                           value="Excluir" />
+                </td>
+            </tr>
+        </table>
+        <br />
+        <div id="msg"></div>
+    </form>
+</body>
+</html>
