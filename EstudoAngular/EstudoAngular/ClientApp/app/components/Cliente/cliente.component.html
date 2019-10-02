@@ -17,3 +17,47 @@
         <td><button (click)="edit(cliente)">Editar</button>&nbsp;&nbsp;<button (click)="delete(cliente)">Deletar</button></td>
     </tr>
 </table>
+
+<!-- Formulário -->
+<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10">
+            <h2>{{formLabel}}</h2>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Nome:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="nome" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Endereço:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="endereco" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Telefone:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="telefone" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">E-Mail:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="email" />
+                        </div>
+                    </div>
+
+                    <div class="form-footer col-xs-12 col-sm-3">
+                        <button type="submit" [disabled]="!form.valid" >Submeter</button>
+                        <button type="button" (click)="cancel()">Cancelar</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</section>
