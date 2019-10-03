@@ -1,0 +1,80 @@
+﻿<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10 table-responsive">
+            <h1>Produtos</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Produto ID</td>
+                        <td>Nome</td>
+                        <td>Qtde</td>
+                        <td>Preco</td>
+                        <td>Categoria</td>
+                        <td>Fornecedor</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let produto of produtos">
+                        <td>{{ produto.produtoId }}</td>
+                        <td>{{ produto.nome }}</td>
+                        <td>{{ produto.quantidade }}</td>
+                        <td>{{ produto.preco | currency:'BRL':true:'1.2-2'}}</td>
+                        <td>{{ produto.categoriaNome }}</td>
+                        <td>{{ produto.fornecedorNome }}</td>
+                        <td><button (click)="edit(produto)">Editar</button>&nbsp;|&nbsp;<button (click)="delete(produto)">Deletar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10">
+            <h2>{{ formLabel }}</h2>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Nome:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="nome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Quantidade:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="quantidade">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Preco:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="text" formControlName="preco">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Categoria:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <select class="form-control" formControlName="categoria">
+                                <option *ngFor="let categoria of categorias" value="{{ categoria.categoriaId }}">{{ categoria.categoriaNome }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Fornecedor:</label>
+                        <div class="col-xs-12 col-sm-6">
+                            <select class="form-control" formControlName="fornecedor">
+                                <option *ngFor="let fornecedor of fornecedores" value="{{ fornecedor.fornecedorId }}">{{ fornecedor.nome }}&nbsp;-&nbsp;{{ fornecedor.contatoNome }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-footer col-xs-12 col-sm-3">
+                        <button type="submit" [disabled]="!form.valid">Submeter</button>
+                        <button type="button" (click)="cancel()">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
