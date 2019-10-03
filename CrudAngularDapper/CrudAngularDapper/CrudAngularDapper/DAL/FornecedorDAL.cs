@@ -13,8 +13,8 @@ namespace CrudAngularDapper.DAL
         // private readonly string connectionString = @"Data Source=RAFAEL-NOTE\\SQLExpress02;Initial Catalog=Vendas;Integrated Security=True";
         // private readonly string connectionString = @"Data Source=localhost;Initial Catalog=Vendas;Integrated Security=True";
 
-        private readonly string connectionString = "Server=RAFAEL-NOTE\\SQLExpress02;Database=Vendas;Trusted_Connection=True;MultipleActiveResultSets=true";
-    // private readonly string connectionString =  "Server=localhost;Database=Vendas;Trusted_Connection=True;MultipleActiveResultSets=true";
+       // private readonly string connectionString = "Server=RAFAEL-NOTE\\SQLExpress02;Database=Vendas;Trusted_Connection=True;MultipleActiveResultSets=true";
+          private readonly string connectionString =  "Server=localhost;Database=Vendas;Trusted_Connection=True;MultipleActiveResultSets=true";
 
         public async Task AdicionarFornecedor(Fornecedor fornecedor)
         {
