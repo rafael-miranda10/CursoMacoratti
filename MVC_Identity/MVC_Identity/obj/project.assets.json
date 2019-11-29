@@ -8376,7 +8376,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "Gs26e3DCB1uegkS0EvDXEbj/UbWci8jvoX3pStMI3/YmzspVymGB38j84B3cH0x1Ykqzg/+7pSJZsYbvvQaF7A==",
+      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -10473,11 +10473,12 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "d56NCfx9JH3knI6xFy6UM/7AeiLMa5Hi+KNEgVLkj3W2zST50rk4akm5B5GrK4UPjhq3cN4pP0xnUsAcT+mxeg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -11625,11 +11626,12 @@
       ]
     },
     "System.Threading.Tasks.Parallel/4.3.0": {
-      "sha512": "+XN46xYyZSQZWpzynWUTTAUGyDZySyEFXgx7+SnS5Q/GCtWtwmAfbPH8PVLSoE7wiaptrYcUTdII9akVXWVB8w==",
+      "sha512": "cbjBNZHf/vQCfcdhzx7knsiygoCKgxL8mZOeocXZn5gWhCdzHIq6bYNKWX0LAJCWYP7bds4yBK8p06YkP0oa0g==",
       "type": "package",
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -12068,23 +12070,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arthur_rafa\\.nuget\\packages\\": {},
+    "C:\\Users\\rafael.miranda\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Portifolio\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\MVC_Identity.csproj",
+      "projectUniqueName": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\MVC_Identity.csproj",
       "projectName": "MVC_Identity",
-      "projectPath": "E:\\Portifolio\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\MVC_Identity.csproj",
-      "packagesPath": "C:\\Users\\arthur_rafa\\.nuget\\packages\\",
-      "outputPath": "E:\\Portifolio\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\obj\\",
+      "projectPath": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\MVC_Identity.csproj",
+      "packagesPath": "C:\\Users\\rafael.miranda\\.nuget\\packages\\",
+      "outputPath": "C:\\Estudo Curso Macoratti\\CursoMacoratti\\MVC_Identity\\MVC_Identity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\arthur_rafa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafael.miranda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
